@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>	TOOGLE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapsis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -149,7 +149,8 @@
         font-size: 10vw;
         font-family: 'Monoton', cursive;
         animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
-		margin-bottom:10%
+		margin-bottom:10%;
+		margin-top:0%
      }
       @keyframes reveal {
         80% {
@@ -267,12 +268,14 @@
       .card2 {
         margin: 30px auto;
         width: 300px;
+        margin-top: 15;
         z-index: 3;
         height: 300px;
         border-radius: 40px;
       box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
         cursor: pointer;
         transition: 0.4s;
+        margin-bottom: 20%;
       }
       
       .card2 .card_image {
@@ -336,6 +339,45 @@
         transition: 0.4s;
       }
       
+      .bn632-hover {
+        margin-top: 20%;
+        width: 160px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+      
+      .bn632-hover:hover {
+        background-position: 100% 0;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+      
+      .bn632-hover:focus {
+        outline: none;
+      }
+      
+      .bn632-hover.bn24 {
+        background-image: linear-gradient(
+            to right,
+            #6253e1,
+            #852d91,
+            #a3a1ff,
+            #f24645
+          );
+        box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+      }
       
       /*-----------nav------------*/
       * {
@@ -361,7 +403,7 @@
       }
       .nav{
         justify-content: center;
-        margin-bottom: 10vh;
+        margin-bottom: 0vh;
         margin-top: 4vh;
         font-family: 'Courier New', monospace;
         font-weight:bold
@@ -483,6 +525,138 @@ code {
   margin: 10px;
 }
 
+/*------------ASSOCITION--------------*/
+.sqr1 {
+  --size: 60px;
+  height: 150px;
+  width: 150px;
+  border-radius: calc(var(--size) * 0.15);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  
+  
+}
+.sqr1::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) * 0.8);
+  height: 100%;
+  top: calc(var(--size) * 0.05);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(20px) opacity(70%);
+}
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+
+  text-align: center;
+
+  background-color: #f6f6f6;
+
+}
+h2 {
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  font-size: 4vw;
+  margin-top: 10%;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+}
+code1 {
+  background-color: #343434;
+  color: orange;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.sqrs1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.sqr1 {
+  margin: 10px;
+}
+
+/*------------TOOGLE LOGO--------------*/
+.sqr2 {
+  --size: 60px;
+  height: 50%;
+  width: 50%;
+  border-radius: calc(var(--size) * 0.15);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 0%
+  
+  
+}
+.sqr2::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) * 0.8);
+  height: 100%;
+  top: calc(var(--size) * 0.05);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(20px) opacity(70%);
+}
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+
+  text-align: center;
+
+  background-color: #f6f6f6;
+
+}
+h2 {
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  font-size: 4vw;
+  margin-top: 10%;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+}
+code2 {
+  background-color: #343434;
+  color: orange;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.sqrs2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.sqr2 {
+  margin-buttom: 0%;
+}
+
+
 
 
 
@@ -504,6 +678,10 @@ code {
         <li class="nav"><a href="#register">REGISTER</a></li>
         <li class="nav"><a href="">CONTACT</a></li>
       </ul></div>
+	  
+	  <div class="sqrs2">
+  <div class="sqr2"><img src="img/LOGO.png" class="sqr2"></div>
+</div
       <div class="logo-container">
       <div class="logo">
         TOOGLE
@@ -523,7 +701,7 @@ code {
 	  <!--<a href="">
       <img src="https://images.unsplash.com/photo-1582842195329-6a0baffd2a39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
 	  <!--<a href="">-->
-      <img src="img/AP.png" "alt=""></a>
+      <img src="img/1.jpg" "alt=""></a>
     </div>
 </section>
   
@@ -536,11 +714,12 @@ code {
     
     <div class="card2 3">
       <div class="card_image">
-        <img src="img/iron.gif" />
+        <img src="https://memeguy.com/photos/thumbs/one-of-my-favourite-iron-man-gifs-76129.gif" />
       </div>
       <div class="card_title">
         <p style="color: white;">AI</p>
       </div>
+      <a href="/"><button class="bn632-hover bn24">Button</button></a>
     </div>
       
       <div class="card2 4">
@@ -550,14 +729,22 @@ code {
       <div class="card_title title-black">
         <p style="color:white">PYTHON</p>
       </div>
+      <a href="/"><button class="bn632-hover bn24">Button</button></a>
       </div>
     
     </div>
-<h1> Sponsership</h1>
+	
+	<h2> IN ASSOCITION WITH</h2>
+
+<div class="sqrs1">
+  <div class="sqr1"><img src="img/ACES.png" class="sqr1"></div>
+  <div class="sqr1"><img src="img/TW.png" class="sqr1"alt="tcs"></div>
+</div>
+<h1> SPONSERSHIP</h1>
 
 <div class="sqrs">
   <div class="sqr"><img src="img/ten.png" class="sqr"></div>
-  <div class="sqr"><img src="img/tcs-logo.png" class="sqr"alt="tcs"></div>
+  <div class="sqr"><img src="img/TATA.png" class="sqr"alt="tcs"></div>
 </div>
 <!-- end of row -->
     </main-container>
