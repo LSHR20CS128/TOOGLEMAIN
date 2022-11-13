@@ -8,7 +8,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapsis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -16,7 +16,7 @@
       body {
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
-        font-family: 'Press Start 2P', cursive;
+        font-family: "proxima-nova-soft", sans-serif;
         --webkit-user-select: none;
       }
       body .vertical-centered-box {
@@ -43,7 +43,7 @@
         transition: all 0.3s;
       }
       body {
-        background: #2c2d44;
+        background: #222672;
       }
       .loader-circle {
         position: absolute;
@@ -128,214 +128,44 @@
       
       /*-------------------teckwisalogo-------------------*/
      
+      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+      :root, body {
+        color: #fff;
+        height: 100%;
+        background: #333641;
+     }
+     .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
+      .logo {
+        background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        position: relative;
+        font-size: 10vw;
+        font-family: 'Monoton', cursive;
+        animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+		margin-bottom:10%
+     }
+      @keyframes reveal {
+        80% {
+          letter-spacing: 8px;
+       }
+        100% {
+          background-size: 300% 300%;
+       }
+     }
+      @keyframes glow {
+        40% {
+          text-shadow: 0 0 8px #fff;
+       }
+     }
+      
 
-
-body {
-  background-color: #141114;
-  background-image: linear-gradient(335deg, black 23px, transparent 23px),
-    linear-gradient(155deg, black 23px, transparent 23px),
-    linear-gradient(335deg, black 23px, transparent 23px),
-    linear-gradient(155deg, black 23px, transparent 23px);
-  background-size: 58px 58px;
-  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-}
-
-.sign {
-  position: relative;
-  display: flex;
-  margin-bottom: 10%;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: 50%;
-  background-image: radial-gradient(
-    ellipse 50% 35% at 50% 50%,
-    #6b1839,
-    transparent
-  );
-  transform: translate(-50%, -50%);
-  letter-spacing: 2;
-  left: 50%;
-  top: 40%;
-  font-family: 'Monoton', cursive;
-  text-transform: uppercase;
-  font-size: 800%;
-  color: #ffe6ff;
-  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  animation: shine 2s forwards, flicker 3s infinite;
-}
-
-@keyframes blink {
-  0%,
-  22%,
-  36%,
-  75% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  }
-  28%,
-  33% {
-    color: #ff65bd;
-    text-shadow: none;
-  }
-  82%,
-  97% {
-    color: #ff2483;
-    text-shadow: none;
-  }
-}
-
-.flicker {
-  animation: shine 2s forwards, blink 3s 2s infinite;
-}
-
-.fast-flicker {
-  animation: shine 2s forwards, blink 10s 1s infinite;
-}
-
-@keyframes shine {
-  0% {
-    color: #6b1839;
-    text-shadow: none;
-  }
-  100% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  }
-}
-
-@keyframes flicker {
-  from {
-    opacity: 1;
-  }
-
-  4% {
-    opacity: 0.9;
-  }
-
-  6% {
-    opacity: 0.85;
-  }
-
-  8% {
-    opacity: 0.95;
-  }
-
-  10% {
-    opacity: 0.9;
-  }
-
-  11% {
-    opacity: 0.922;
-  }
-
-  12% {
-    opacity: 0.9;
-  }
-
-  14% {
-    opacity: 0.95;
-  }
-
-  16% {
-    opacity: 0.98;
-  }
-
-  17% {
-    opacity: 0.9;
-  }
-
-  19% {
-    opacity: 0.93;
-  }
-
-  20% {
-    opacity: 0.99;
-  }
-
-  24% {
-    opacity: 1;
-  }
-
-  26% {
-    opacity: 0.94;
-  }
-
-  28% {
-    opacity: 0.98;
-  }
-
-  37% {
-    opacity: 0.93;
-  }
-
-  38% {
-    opacity: 0.5;
-  }
-
-  39% {
-    opacity: 0.96;
-  }
-
-  42% {
-    opacity: 1;
-  }
-
-  44% {
-    opacity: 0.97;
-  }
-
-  46% {
-    opacity: 0.94;
-  }
-
-  56% {
-    opacity: 0.9;
-  }
-
-  58% {
-    opacity: 0.9;
-  }
-
-  60% {
-    opacity: 0.99;
-  }
-
-  68% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 0.9;
-  }
-
-  72% {
-    opacity: 0.95;
-  }
-
-  93% {
-    opacity: 0.93;
-  }
-
-  95% {
-    opacity: 0.95;
-  }
-
-  97% {
-    opacity: 0.93;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 
       /*--------------top card----------------*/
@@ -590,9 +420,9 @@ body {
       }
 /*------------logos--------------*/
 .sqr {
-  --size: 100px;
+  --size: 60px;
   height: var(--size);
-  width: var(200px);
+  width: var(150px);
   border-radius: calc(var(--size) * 0.15);
   background-image: var(--img);
   background-size: cover;
@@ -625,10 +455,16 @@ body {
 
 }
 h1 {
-  margin-bottom: 40px;
-  color: white;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   position: relative;
-  margin-top: 20%;
+  font-size: 4vw;
+  margin-top: 10%;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+
 }
 code {
   background-color: #343434;
@@ -648,239 +484,7 @@ code {
 }
 
 
-/*-------------button1-----------------*/-----------------*/
 
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.button-holder a{
-    position: relative;
-    display: inline-block;
-    padding: 5px 100px;
-    margin: -8px 0;
-    color: #03e9f4;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    margin-right: 0px;
-   
-}
-.button-holder a:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-}
-.button-holder a:nth-child(1){
-    filter: hue-rotate(270deg);
-}
-.button-holder a:nth-child(2){
-    filter: hue-rotate(110deg);
-}
-.button-holder a span{
-    position: absolute;
-    display: block;
-}
-.button-holder a span:nth-child(1){
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg,transparent,#03e9f4);
-    animation: animate1 1s linear infinite;
-}
-@keyframes animate1{
-    0%{
-        left: -100%;
-    }
-    50%,100%{
-        left: 100%;
-    }
-}
-.button-holder a span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,#03e9f4);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-@keyframes animate2{
-    0%{
-        top: -100%;
-    }
-    50%,100%{
-        top: 100%;
-    }
-}
-.button-holder a span:nth-child(3){
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg,transparent,#03e9f4);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-@keyframes animate3{
-    0%{
-        right: -100%;
-    }
-    50%,100%{
-        right: 100%;
-    }
-}
-
-
-.button-holder a span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,#03e9f4);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-@keyframes animate4{
-    0%{
-        bottom: -100%;
-    }
-    50%,100%{
-        bottom: 100%;
-    }
-}
-.button-holder{
-  display: flex;
-  justify-content: center;
-}
-
-/*-------------button2-----------------*/
-
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.button2-holder a{
-    position: relative;
-    display: inline-block;
-    padding: 5px 50px;
-    margin: -8px 0;
-    color: #03e9f4;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    margin-right: 0px;
-   
-}
-.button2-holder a:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-}
-.button2-holder a:nth-child(1){
-    filter: hue-rotate(270deg);
-}
-.button2-holder a:nth-child(2){
-    filter: hue-rotate(110deg);
-}
-.button2-holder a span{
-    position: absolute;
-    display: block;
-}
-.button2-holder a span:nth-child(1){
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg,transparent,#03e9f4);
-    animation: animate1 1s linear infinite;
-}
-@keyframes animate1{
-    0%{
-        left: -100%;
-    }
-    50%,100%{
-        left: 100%;
-    }
-}
-.button2-holder a span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,#03e9f4);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-@keyframes animate2{
-    0%{
-        top: -100%;
-    }
-    50%,100%{
-        top: 100%;
-    }
-}
-.button2-holder a span:nth-child(3){
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg,transparent,#03e9f4);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-@keyframes animate3{
-    0%{
-        right: -100%;
-    }
-    50%,100%{
-        right: 100%;
-    }
-}
-
-
-.button2-holder a span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,#03e9f4);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-@keyframes animate4{
-    0%{
-        bottom: -100%;
-    }
-    50%,100%{
-        bottom: 100%;
-    }
-}
-.button2-holder{
-  display: flex;
-  justify-content: center;
-}
 
     </style>
 </head>
@@ -900,11 +504,10 @@ code {
         <li class="nav"><a href="#register">REGISTER</a></li>
         <li class="nav"><a href="">CONTACT</a></li>
       </ul></div>
-      
-  <div class="sign">
-    <div class="text-section">
-    <span class="fast-flicker">T</span>OO<span class="flicker">G</span>LE</div>
-  </div>
+      <div class="logo-container">
+      <div class="logo">
+        TOOGLE
+    </div></div>
   <div class="text-div" id="about">
     Toogle is a workshop conducted in association with tekwiza techfest and the department of computer science and engineering of sahrdaya.we understand that the students need a 
 	guidance to boost their skills and talents and to learn something new.The whole study related to Artificial intelligence with tensor flow is  concerned about the beneficiary 
@@ -915,50 +518,37 @@ code {
   <section class="showandcard">
 
     <div class="container">
-	<!--<a href="#">-->
-      <!--<img src="https://images.unsplash.com/photo-1569390173732-5c735072c80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>-->
+	<!--<a href="#">
+      <img src="https://images.unsplash.com/photo-1569390173732-5c735072c80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
+	  <!--<a href="">
+      <img src="https://images.unsplash.com/photo-1582842195329-6a0baffd2a39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
 	  <!--<a href="">-->
-      <!--<img src="https://images.unsplash.com/photo-1582842195329-6a0baffd2a39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>-->
-	  <!--<a href="">-->
-      <img src="img/1.jpg" alt="PYTHON"></a>
+      <img src="img/AP.png" "alt=""></a>
     </div>
 </section>
   
 
   <!-- row -->
   <h1 id="register">WORKSHOPS</h1>
+  
   <div class="cards-list">
   
     
     <div class="card2 3">
       <div class="card_image">
-        <img src="img/ai.gif" />
+        <img src="img/iron.gif" />
       </div>
       <div class="card_title">
-         <div class="button-holder">
-       <a href="https://lshr20cs128.github.io/TOOGLEFINALAI/">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        AI
-    </a></div>
+        <p style="color: white;">AI</p>
       </div>
     </div>
       
       <div class="card2 4">
       <div class="card_image">
-        <img src="img/giphy 1.gif" />
+        <img src="https://www.kindpng.com/picc/m/159-1595772_transparent-python-logo-hd-png-download.png" alt="Transparent Python Logo, HD Png Download@kindpng.com">
         </div>
       <div class="card_title title-black">
-         <div class="button2-holder">
-       <a href="https://lshr20cs128.github.io/TOOGLEFINALAP/">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        PYTHON
-    </a></div>
+        <p style="color:white">PYTHON</p>
       </div>
       </div>
     
