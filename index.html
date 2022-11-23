@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapsis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <style>
@@ -170,51 +171,74 @@
 
 
       /*--------------top card----------------*/
-      .showandcard{
-        margin-top: 5%;
+      .time-line_main{
+      display: flex;
+      justify-content: center;
       }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing:border-box;
+      .timeline{
+        width:800px;
+        background-color:#072736;
+        color:#fff;
+        padding:30px 20px;
+        box-shadow:0px 0px 10px rgba(0,0,0,.5);
       }
-      body {
-        width: 100%;
-        height: 100vh;
-        background-color:#000;
-        
-        display:grid;
-        place-items:center;
+      .timeline ul{
+        list-style-type:none;
+        border-left:2px solid #094a68;
+        padding:10px 5px;
       }
-      .container img {
-        width: 40%;
-        height: 100%;
-        object-fit:cover;
-        
-        -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
-        
-        transform-origin:center;
-        transform:perspective(800px) rotateY(25deg);
-        transition:0.5s;
+      .timeline ul li{
+        padding:20px 20px;
+        position:relative;
+        cursor:pointer;
+        transition:.5s;
       }
-      .container {
-        max-width:600px;
-        max-height:350px;
-        
-        
-        
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:20px;
-        
+      .timeline ul li span{
+        display:inline-block;
+        background-color:#1685b8;
+        border-radius:25px;
+        padding:10px 30px;
+        font-size:15px;
+        text-align:center;
       }
-      .container:hover img {
-        opacity:0.3;
+      .timeline ul li .content h3{
+        color:#34ace0;
+        font-size:17px;
+        padding-top:5px;
       }
-      .container img:hover {
-        transform:perspective(800px)       rotateY(0deg);
-        opacity:1;
+      .timeline ul li .content p{
+        padding:0px 0px 0px 0px;
+        font-size:15px;
+		text-align: left;
+      }
+      .timeline ul li:before{
+        position:absolute;
+        content:'';
+        width:10px;
+        height:10px;
+        background-color:#34ace0;
+        border-radius:50%;
+        left:-11px;
+        top:28px;
+        transition:.5s;
+      }
+      .timeline ul li:hover{
+        background-color:#071f2a;
+      }
+      .timeline ul li:hover:before{
+        background-color:#0F0;
+        box-shadow:0px 0px 10px 2px #0F0;
+      }
+      @media (max-width:300px){
+        .timeline{
+          width:100%;
+          padding:30px 5px 30px 10px;
+        }
+        .timeline ul li .content h3{
+          color:#34ace0;
+          font-size:15px;
+        }
+      
       }
       
       /*-----------about-------------*/
@@ -227,17 +251,13 @@
      }
  
       .text-div {
-        background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
         font-size: 150%;
         font-family: 'Courier New', monospace;
-          height: 100%;
+          height: 50%;
           position: relative;
-          width: 60%;
-        left: 22%;
-        animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+          width: 90%;
+        left: 5%;
+
      }
       @keyframes reveal {
         80% {
@@ -253,130 +273,195 @@
        }
      }
       
+	  @media screen and (max-width:780px){
+	  .text-div {
+        
+          height: 1000px;
+          
+	  }
+	  }
+	  
+	  @media (max-width:300px){
+	  .text-div {
+        
+          height: 1000px;
+          
+	  }
+	  }
       /* ---------------------------------- */
       
       /*---------------bottom card----------------------*/
       
-      .cards-list {
-        z-index: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-      
-      .card2 {
-        margin: 30px auto;
-        width: 300px;
-        margin-top: 15;
-        z-index: 3;
-        height: 300px;
-        border-radius: 40px;
-      box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-        cursor: pointer;
-        transition: 0.4s;
-        margin-bottom: 20%;
-      }
-      
-      .card2 .card_image {
-        width: inherit;
-        height: inherit;
-        border-radius: 40px;
-      }
-      
-      .card2 .card_image img {
-        width: inherit;
-        height: inherit;
-        border-radius: 40px;
-        object-fit: cover;
-      }
-      
-      .card2 .card_title {
-        text-align: center;
-        position: relative;
-        border-radius: 0px 0px 40px 40px;
-        font-family: sans-serif;
-        font-weight: bold;
-        font-size: 30px;
-        margin-top: -80px;
-        height: 40px;
-      }
-      
-      .card2:hover {
-        transform: scale(0.9, 0.9);
-        box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-          -5px -5px 30px 15px rgba(0,0,0,0.22);
-      }
-      
-      .title-white {
-        color: white;
-      }
-      
-      .title-black {
-        color: black;
-      }
-      
-      @media all and (max-width: 500px) {
-        .card-list {
-          /* On small screens, we are no longer using row direction but column */
-          flex-direction: column;
-        }
-      }
-      
-      
-      
-      .card {
-        margin: 30px auto;
-        width: 300px;
-        height: 300px;
-        border-radius: 40px;
-        background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-repeat: no-repeat;
-      box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-        transition: 0.4s;
-      }
-      
-      .bn632-hover {
-        margin-top: 20%;
-        width: 160px;
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-        height: 55px;
-        text-align: center;
-        border: none;
-        background-size: 300% 100%;
-        border-radius: 50px;
-        -o-transition: all 0.4s ease-in-out;
-        -webkit-transition: all 0.4s ease-in-out;
-        transition: all 0.4s ease-in-out;
-      }
-      
-      .bn632-hover:hover {
-        background-position: 100% 0;
-        -moz-transition: all .4s ease-in-out;
-        -o-transition: all .4s ease-in-out;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-      }
-      
-      .bn632-hover:focus {
-        outline: none;
-      }
-      
-      .bn632-hover.bn24 {
-        background-image: linear-gradient(
-            to right,
-            #6253e1,
-            #852d91,
-            #a3a1ff,
-            #f24645
-          );
-        box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+      *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+body{
+	background: #eee;}
+.flexone
+{
+	flex: 1;
+	}
+
+.groups{
+	margin: 0 auto;
+	width: 80%;
+	padding: 10px;
+	height: auto;
+	}
+.groups li{
+	position: relative;
+	list-style: none;
+	background: none;
+	border-radius: 5px;
+    box-shadow: 0 3px 4px 0 #0001;
+	overflow: hidden;
+	margin-bottom: 30px;
+	transition: all 0.3s;
+	}
+/*.groups li:hover{
+	transform: scale(1.04);
+	box-shadow: 0 4px 14px 0 #0005;
+	}*/
+.groups .card{
+	overflow: hidden;
+	display: block;
+	background: #0f0b154f;
+	margin-top: 5%;
+  border-radius: 2%;
+	}
+.groups .image-session{
+	float: left;
+	overflow: hidden;
+	margin-right: 20px;
+	}
+.groups .image-session .image{
+	width: 400px;
+	height: 420px;
+	display: block;
+	background-size: cover;
+    background-position: center;
+    margin-left: 5%;
+margin-top: 5%;
+border-radius: 3%;
+	}
+.groups .meta-sission{
+	position: relative;
+	padding: 15px;
+	display: block;
+	height: 320px;
+	}
+.groups .meta-sission .head{
+display: flex;
+margin-bottom: 10px;
+}
+.groups .meta-sission .head .catogry{
+	list-style: none;
+	text-decoration: none;
+	font-size: 14px;
+    font-weight: 600;
+	color: #0075ff;
+	}
+.meta-sission .head .per span,
+.meta-sission .head .per input{
+	display: block;
+	font-size: 10px;
+	text-align: right;
+	}
+.meta-sission .head .per input{
+	--webkit-appearance: none;
+	height: 5px;
+	border-radius: 5px;
+	background: #0001;
+    margin-bottom: 4px;
+	overflow: hidden;
+}
+.meta-sission .head .per input::-webkit-slider-thumb{
+	--webkit-appearance: none;
+	width: 0;
+    box-shadow: -100px 0 0 100px #0075ff;
+	}
+.groups .body .title{
+	height: 60px;
+	overflow: hidden;
+	font-size: 28px;
+	text-align: center;
+	}
+.groups .body .desc{
+	height: 45px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	font-size: 18px;
+	margin-top:20px;
+	}
+.groups .footer .button{
+	position: absolute;
+	bottom: -100px;
+	right: 25px;
+	background-image: linear-gradient( to right, #6253e1, #852d91, #a3a1ff, #f24645 );
+	box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  color: #fff;
+    line-height: 2.2;
+	padding: 0 20px;
+	border-radius: 50px;
+	text-decoration: none;
+    box-shadow: 0 1px 6px 0 #0004;
+	transition: all 0.3s;
+font-size: 16px;
+font-weight: 600;
+color: #fff;
+cursor: pointer;
+
+background-size: 300% 100%;
+border-radius: 50px;
+-o-transition: all 0.4s ease-in-out;
+-webkit-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+	}
+.groups .footer .button:hover{
+	box-shadow: 0 3px 8px 0 #0005;
+	background: #063a78;right: 15px;
+	}
+.groups .footer .views{
+	display: block;
+	font-size: 12px;
+	margin-top: 40px;
+	}
+	
+.red-color {
+        color:red;
+    }
+.blue-color {
+        color:#34ace0;
+    }
+
+@media screen and (max-width:780px){
+	.groups{    
+	width: 96%;
+	}
+    .groups li:hover{
+		transform: none;  
+		box-shadow: none;
+		}
+		.groups .footer .button{
+		bottom: 20px;
+	}
+}
+@media screen and (max-width:560px){
+	.groups .image-session{   
+	float: none;   
+	margin-right: 0;
+	}
+    .groups .image-session .image{
+		width: 100%;
+		}
+	.groups .footer .button{
+		bottom: 20px;
+	}
+}
+     p.desc{
+        font-family: 'Courier New', monospace;
       }
       
       /*-----------nav------------*/
@@ -459,12 +544,109 @@
         padding: 8px 20px;
         color: #ccc;
         text-decoration: none;
+
       }
+      /*--------------questions-----------------*/
+      @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+
+.container_1 {
+  margin: 0 auto;
+  padding: 4rem;
+
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #03b5d2;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  color: #03b5d2;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
 /*------------logos--------------*/
 .sqr {
   --size: 60px;
-  height: var(--size);
-  width: var(150px);
+  height: 90px;
+  width: 150px;
   border-radius: calc(var(--size) * 0.15);
   background-image: var(--img);
   background-size: cover;
@@ -489,7 +671,6 @@
 }
 body {
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
 
   text-align: center;
 
@@ -497,15 +678,11 @@ body {
 
 }
 h1 {
-  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+
   position: relative;
   font-size: 4vw;
   margin-top: 10%;
   font-family: "Source Sans Pro", sans-serif;
-  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
 
 }
 code {
@@ -554,7 +731,6 @@ code {
 }
 body {
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
 
   text-align: center;
 
@@ -562,15 +738,11 @@ body {
 
 }
 h2 {
-  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+
   position: relative;
   font-size: 4vw;
   margin-top: 10%;
-  font-family: "Source Sans Pro", sans-serif;
-  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  font-family: 'Courier New', monospace;
 
 }
 code1 {
@@ -620,7 +792,7 @@ code1 {
 }
 body {
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Courier New', monospace;
 
   text-align: center;
 
@@ -628,15 +800,11 @@ body {
 
 }
 h2 {
-  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+
   position: relative;
   font-size: 4vw;
-  margin-top: 10%;
+  margin-top: 3%;
   font-family: "Source Sans Pro", sans-serif;
-  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
 
 }
 code2 {
@@ -653,7 +821,192 @@ code2 {
   align-items: center;
 }
 .sqr2 {
-  margin-buttom: 0%;
+  margin-bottom: 0%;
+}
+/*----------------footer--------------------*/
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #032934;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+  position: relative;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+.footer-distributed .footer-right img{
+	width: 30%;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
 }
 
 
@@ -676,7 +1029,7 @@ code2 {
         <li class="nav"><a href="">HOME</a></li>
         <li class="nav"><a href="#about">ABOUT</a></li>
         <li class="nav"><a href="#register">REGISTER</a></li>
-        <li class="nav"><a href="">CONTACT</a></li>
+        <li class="nav"><a href="#contact">CONTACT</a></li>
       </ul></div>
 	  
 	  <div class="sqrs2">
@@ -692,52 +1045,158 @@ code2 {
 	and safety features of the system associated With our workshop program one can easily get a kick-start in this particular field of technology 
 
  </div>
- <h1>POSTERS</h1>
-  <section class="showandcard">
+ <h1> SCHEDULE</h1>
+ <div class="time-line_main">
+ <div class="timeline">
+  <ul>
+    <li>
+      <span>EVENTS</span>
+      <div class="content"> 
+        <h3>WORKSHOPS</h3>
+        <p class="fa-arrows blue-color" style="font-size:18px">&nbsp&nbsp&nbsp&nbspADVANCED PYTHON AND AUTOMATION</p>
+		<p class="fa-arrows blue-color" style="font-size:18px">&nbsp&nbsp&nbsp&nbspARTIFICAL INTELLIGENCE</p>
+		<p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbsp02 AND 03 DEC 2022</p>
+		<p class="desc"><i class="fa fa-map-marker red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSahrdaya College of Engineering & Technology </p>
+      </div>
+    </li>
+    <li>
+      <span>REGISTER</span>
+      <div class="content">
+        <h3></h3>
+        <p class="fa-arrows blue-color" style="font-size:18px" >&nbsp&nbsp&nbsp&nbspADVANCED PYTHON AND AUTOMATION</p>
+		<p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSTART: 15 NOV 2022&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEND: 30 NOV 2022</p>
+		<p class="desc"><i class="fa-rupee red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspREGISTER FEE:&nbsp&nbsp&nbsp&nbsp350</p>
+		<p class="fa-arrows blue-color" style="font-size:18px">&nbsp&nbsp&nbsp&nbspARTIFICAL INTELLIGENCE</p>
+		<p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSTART: 15 NOV 2022&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEND: 30 NOV 2022</p>
+		<p class="desc"><i class="fa-rupee red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspREGISTER FEE:&nbsp&nbsp&nbsp&nbsp999</p>
+		
+      </div>
+    </li>
+    <li>
+      <span>ORGANIZERS</span>
+      <div class="content">
+        <h3></h3>
+        <p class="fa-arrows blue-color" style="font-size:18px" >&nbsp&nbsp&nbsp&nbspADVANCED PYTHON AND AUTOMATION &nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp&nbsp TCS</p>
+		<p class="fa-arrows blue-color" style="font-size:18px" >&nbsp&nbsp&nbsp&nbspARTIFICAL INTELLIGENCE &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp&nbsp&nbspTENSORFLOW</p>
+      </div>
+    </li>
+   <!-- <li>
+      <span>DAY 2</span>
+      <div class="content">
+        <h3>PROGRAM SCHEDULE</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+        </p>
+      </div>
+    </li>-->
+  </ul>
+</div></div>
 
-    <div class="container">
-	<!--<a href="#">
-      <img src="https://images.unsplash.com/photo-1569390173732-5c735072c80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
-	  <!--<a href="">
-      <img src="https://images.unsplash.com/photo-1582842195329-6a0baffd2a39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
-	  <!--<a href="">-->
-      <img src="img/AP.png" style="height: 300px" "alt=""></a>
-    </div>
-</section>
   
 
   <!-- row -->
   <h1 id="register">WORKSHOPS</h1>
   
-  <div class="cards-list">
+  <div class="article-contener">
+    <ul class="groups">
+        <li>
+            <div class="card">
+                <div class="image-session">
+                    <span class="image" style="background-image: url('img/AI.png');"></span>
+                </div>
+                <div class="meta-sission">                   
+                    <div class="body">
+                        <h2 class="title">ARTIFICAL INTELLIGENCE</h2>
+                        
+							<p class="desc" style="text-align:left;"><i class="fa fa-map-marker red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSahrdaya College of Engineering & Technology </p>							
+							<p class="desc" style="text-align:left;"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp02 AND 03 DEC 2022</p>
+							<p class="desc" style="text-align:left;"><i class="fa-arrows red-color"style="font-size:20px"></i>&nbsp&nbsp&nbsp2 DAY WORKSHOP</p>
+            <p class="desc"></p>
+                    </div>
+                   <div class="footer">                        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoWZ7X4qkjbgyPAIRF04-GxGke3-9niZ1Dgujj4eOILh8HMA/viewform" class="button" style="font-family: 'Courier New', monospace;">REGISTER →</a>
+                    </div>
+                    </div>
+                </div>   
+      <div class="card">
+                <div class="image-session">
+                    <span class="image" style="background-image: url('https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png');"></span>
+                </div>
+                <div class="meta-sission">                   
+                    <div class="body">
+                        <h2 class="title">ADVANCED PYTHON AND AUTOMATION</h2>
+                        
+                        <p class="desc" style="text-align:left;"><i class="fa fa-map-marker red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSahrdaya College of Engineering & Technology </p>							
+						<p class="desc" style="text-align:left;"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp02 AND 03 DEC 2022</p>
+						<p class="desc" style="text-align:left;"><i class="fa-arrows red-color"style="font-size:20px"></i>&nbsp&nbsp&nbsp2 DAY WORKSHOP</p>
+            <p class="desc"></p>
+                    </div>
+                   <div class="footer">                        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYyvQ0q8706h6GunG6YvTJIZdyQl_LAfYc54lIW7kiHtT1xQ/closedform" class="button">REGISTER →</a>
+                    </div>
+                    </div>
+                </div>  
+        </li>
+    </ul>
+</div>
+<div class="container_1">
+  <h2>FREQUENTLY ASKED QUESTIONS</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Who all eligible for workshop?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Bachelors, Masters and related courses with in computer science and allied branches.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">When is the reporting time? </span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>08:00 am.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is we required to bring our laptop for workshop?<span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>NO, specified lab is been acquired for practical section problem.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Amount required for registration?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>ADVANCED PYTHON AND AUTOMATION:&nbsp&nbsp&nbsp&nbsp350</p>
+		<p>ARTIFICAL INTELLIGENCE:&nbsp&nbsp&nbsp&nbsp999</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Food and accommodation details?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
   
-    
-    <div class="card2 3">
-      <div class="card_image">
-        <img src="https://memeguy.com/photos/thumbs/one-of-my-favourite-iron-man-gifs-76129.gif" />
-      </div>
-      <div class="card_title">
-        <p style="color: white;">AI</p>
-      </div>
-      <a href="https://lshr20cs128.github.io/TOOGLEFINALAI/"><button class="bn632-hover bn24">REGISTER</button></a>
-    </div>
-      
-      <div class="card2 4">
-      <div class="card_image">
-        <img src="https://www.kindpng.com/picc/m/159-1595772_transparent-python-logo-hd-png-download.png" alt="Transparent Python Logo, HD Png Download@kindpng.com">
-        </div>
-      <div class="card_title title-black">
-        <p style="color:white">PYTHON</p>
-      </div>
-      <a href="https://lshr20cs128.github.io/TOOGLEFINALAP/"><button class="bn632-hover bn24">REGISTER</button></a>
-      </div>
-    
-    </div>
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
 	
 	<h2> IN ASSOCITION WITH</h2>
 
 <div class="sqrs1">
-  <div class="sqr1"><img src="img/ACES.png" class="sqr1"></div>
+  <div class="sqr1"><img src="https://tekothon.in/static/media/aces.7d06f890ebc557f35a4f.PNG" class="sqr1"></div>
   <div class="sqr1"><img src="img/TW.png" class="sqr1"alt="tcs"></div>
 </div>
 <h1> ORGANIZERS</h1>
@@ -746,9 +1205,60 @@ code2 {
   <div class="sqr"><img src="img/ten.png" class="sqr"></div>
   <div class="sqr"><img src="img/TATA.png" class="sqr"alt="tcs"></div>
 </div>
+<footer class="footer-distributed" id="contact">
+
+  <div class="footer-left">
+      <img src="img/logo.png">
+    <h3 >TOOGLE</h3>
+
+    <p class="footer-links">
+      <a href="#HOME">HOME</a>
+      |
+      <a href="#">BLOG</a>
+      |
+      <a href="#about">ABOUT</a>
+      |
+      <a href="#contact">CONTACT</a>
+      |
+      <a href="#register">REGISTER</a>
+    </p>
+
+    <p class="footer-company-name"></p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>Sahrdaya College of Engineering and Technology</span>
+       PB NO 17, Kodakara, Kerala 680684</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 7356385582, +91 9567588286</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="/cdn-cgi/l/email-protection#13606663637c6167537677667c7d7a6b3d707c7e"><span class="__cf_email__" data-cfemail="cdbeb8bdbda2bfb98da8a9b8a2a3a4b5e3aea2a0">toogleaces22@gmail.com</span></a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>FOLLOW US</span>
+       </p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+	<!--<img src="img/logo.png">-->
+  </div>
+</footer>
 <!-- end of row -->
     </main-container>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
     <script>
       /*!
  * Particleground
