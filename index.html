@@ -404,7 +404,7 @@ margin-bottom: 10px;
   color: #fff;
     line-height: 2.2;
 	padding: 0 20px;
-	border-radius: 50px;
+	border-radius: 10px;
 	text-decoration: none;
     box-shadow: 0 1px 6px 0 #0004;
 	transition: all 0.3s;
@@ -414,7 +414,7 @@ color: #fff;
 cursor: pointer;
 
 background-size: 300% 100%;
-border-radius: 50px;
+border-radius: 10px;
 -o-transition: all 0.4s ease-in-out;
 -webkit-transition: all 0.4s ease-in-out;
 transition: all 0.4s ease-in-out;
@@ -436,6 +436,9 @@ transition: all 0.4s ease-in-out;
         color:#34ace0;
     }
 
+.white-color {
+        color:#ffffff;
+    }
 @media screen and (max-width:780px){
 	.groups{    
 	width: 96%;
@@ -625,7 +628,7 @@ transition: all 0.4s ease-in-out;
 }
 .accordion button[aria-expanded=true] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 15em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
@@ -1010,6 +1013,31 @@ footer{
 }
 
 
+/*----MAP----*/
+	.mapouter{
+	
+		position:relative;
+		text-align:right;
+		width:100%;
+		height:50%;
+		item-align: center;
+		}
+		
+		
+	.gmap_canvas {
+	
+		overflow:hidden;
+		background:none!important;
+		width:100%;
+		height:50%;
+		}
+		
+		
+	.gmap_iframe {
+
+		height:50%!important;
+		}
+
 
 
 
@@ -1120,7 +1148,7 @@ footer{
                 </div>   
       <div class="card">
                 <div class="image-session">
-                    <span class="image" style="background-image: url('img/PY.png');"></span>
+                    <span class="image" style="background-image: url('https://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png');"></span>
                 </div>
                 <div class="meta-sission">                   
                     <div class="body">
@@ -1140,7 +1168,7 @@ footer{
     </ul>
 </div>
 <div class="container_1">
-  <h2>FREQUENTLY ASKED QUESTIONS</h2>
+  <h2 class="title">FREQUENTLY ASKED QUESTIONS</h2>
   <div class="accordion">
     <div class="accordion-item">
       <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Who all eligible for workshop?</span><span class="icon" aria-hidden="true"></span></button>
@@ -1149,7 +1177,7 @@ footer{
       </div>
     </div>
     <div class="accordion-item">
-      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">When is the reporting time? </span><span class="icon" aria-hidden="true"></span></button>
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">When is the reporting time starts? </span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
         <p>08:00 am.</p>
       </div>
@@ -1157,7 +1185,7 @@ footer{
     <div class="accordion-item">
       <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is we required to bring our laptop for workshop?<span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
-        <p>NO, specified lab is been acquired for practical section problem.</p>
+        <p>YES, specified lab is also been acquired for practical section problem.</p>
       </div>
     </div>
     <div class="accordion-item">
@@ -1170,7 +1198,7 @@ footer{
     <div class="accordion-item">
       <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Food and accommodation details?</span><span class="icon" aria-hidden="true"></span></button>
       <div class="accordion-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>The food and accommodation will be provided by the college it's self.</p>
       </div>
     </div>
   </div>
@@ -1205,10 +1233,12 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
   <div class="sqr"><img src="img/ten.png" class="sqr"></div>
   <div class="sqr"><img src="img/TATA.png" class="sqr"alt="tcs"></div>
 </div>
+
+
 <footer class="footer-distributed" id="contact">
 
   <div class="footer-left">
-      <img src="img/LOGO.png">
+      <img src="img/logo.png">
     <h3 >TOOGLE</h3>
 
     <p class="footer-links">
@@ -1247,14 +1277,20 @@ items.forEach(item => item.addEventListener('click', toggleAccordion));
       <span>FOLLOW US</span>
        </p>
     <div class="footer-icons">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-youtube"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100087384447381"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/toogle_aces/?hl=en"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/watch?v=K6J13RgK2ms"><i class="fa fa-youtube"></i></a>
     </div>
-	<img src="img/SAHRDAYA.png">
-  </div>
+	<p class="footer-company-about">
+      <span>LOCATION</span>
+       </p>
+	<!--<img src="img/logo.png">-->
+	<div class="mapouter">
+<div class="gmap_canvas">
+<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=sahrdaya college of engineering&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+
+</div>
+</div>
 </footer>
 <!-- end of row -->
     </main-container>
